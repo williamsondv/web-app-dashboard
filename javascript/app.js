@@ -24,16 +24,23 @@ checkLocalStorage();
 
 document.getElementById('save-button').addEventListener('click', function(){
  if(notificationSwitch.checked) {
-   localStorage.setItem('notification-switch', 'true')
+   localStorage.setItem('notification-switch', 'true');
  }
  if(publicSwitch.checked) {
-  localStorage.setItem('public-switch', 'true')
+  localStorage.setItem('public-switch', 'true');
  }
-  localStorage.setItem('time-zone-input', timeZone.value)
+  localStorage.setItem('time-zone-input', timeZone.value);
 });
 
 document.getElementById("cancel-button").addEventListener('click', function() {
   localStorage.clear();
+  if(notificationSwitch.checked) {
+    notificationSwitch.click();
+  }
+  if(publicSwitch.checked) {
+    publicSwitch.click();
+  }
+   timeZone.value = "";
 });
 
 //search variables and functions for user search bar
