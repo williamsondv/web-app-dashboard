@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Web-App-Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body class='container'>
+    <header id='header'>
+            <h2 id='app-title'>Your<span style="font-weight: lighter;">App</span>&trade;</h2>
+            <img id='bell-icon' src="icons/icon-bell.svg" alt="alert bell icon"/>
+            <div class="vertical-line"></div>
+            <img id='user-photo' alt="user" src="images/williamsonDavidPic.jpg"/>
+            <p id='user-name'>David Williamson</p>
+    </header>
+    <div class="sidenav">
+        <nav id="navigation">
+            <a href="#header"><img id='dashboard-icon' src="icons/icon-dashboard.svg" alt="dashboard icon"/></a>
+            <a href="#new-members"><img id='members-icon' src="icons/icon-members.svg" alt="members icon"/></a>
+            <a href="#recent-activity"><img id='visits-icon' src="icons/icon-visits.svg" alt="visits icon"/></a>
+            <a href="#settings"><img id='settings-icon' src="icons/icon-settings.svg" alt="settings icon"/></a>
+        </nav>
+    </div>
+    <main id='main'>
+        <h3 id='dashboard-heading'>Dashboard</h3>
+        <div id='searchbar-div'>
+            <input id='searchbar' type="search" placeholder="Search...">
+            <div id="graph-options">
+                <a><p>Hourly</p></a>
+                <a><p>Daily</p></a>
+                <a><p>Weekly</p></a>
+                <a><p>Monthly</p></a>
+            </div>
+        </div>
+        <div id='dashboard'>
+            <div class="alert">
+                Alert! Quis Custodiet Ipsos Custodes
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+            <h4 id='line-chart-heading'>Traffic</h4>
+            <canvas id="line-chart"></canvas>
+        </div>
+        <div id='daily-traffic'>
+            <h4 id='bar-chart-heading'>Daily Traffic</h4>
+            <canvas id="bar-chart"></canvas>
+        </div>
+        <div id='mobile-users'>
+            <h4 id='pie-chart-heading'>Mobile Users</h4>
+            <canvas id="pie-chart"></canvas>
+        </div>
+        <div id='social-stats'>
+            <h4>Social Stats</h4>
+            <div class="wrapper">
+                <div class="social-div"><a><img class="social-icon" src="icons/icon-twitter.svg" alt="twitter icon"/></a><p class="social-stat-name">Twitter</p><p class="social-stat-numbers">10,345</p></div>
+                <div class="social-div"><a><img class="social-icon" src="icons/icon-facebook.svg" alt="facebook icon"/></a><p class="social-stat-name">Facebook</p><p class="social-stat-numbers">8739</p></div>
+                <div class="social-div"><a><img class="social-icon" src="icons/icon-google-plus.svg" alt="google icon"/></a><p class="social-stat-name">Google+</p><p class="social-stat-numbers">2530</p></div>
+            </div>
+        </div>
+        <div id='new-members'>
+            <h4>New Members</h4>
+            <div class="user-wrapper">
+                <div class="user-div">
+                    <a><img class="user-img" src="images/member-1.jpg" alt="member"/></a>
+                    <p class="name">Laura Ortego</p>
+                    <p class="email">lortego@maint.org</p>
+                    <p class="date">10/13/2020</p>
+                </div>
+                <div class="user-div">
+                    <a><img class="user-img" src="images/member-2.jpg" alt="member"/></a>
+                    <p class="name">Bryan Sherlin</p>
+                    <p class="email">bsherlin@systems.net</p>
+                    <p class="date">11/23/2020</p>
+                </div>
+                <div class="user-div">
+                    <a><img class="user-img" src="images/member-3.jpg" alt="member"/></a>
+                    <p class="name">Anna Rogers</p>
+                    <p class="email">arogers@design.com</p>
+                    <p class="date">09/24/2020</p>
+                </div>
+                <div class="user-div">
+                    <a><img class="user-img" src="images/member-4.jpg" alt="member"/></a>
+                    <p class="name">Howard Coates</p>
+                    <p class="email">hcoates@medical.biz</p>
+                    <p class="date">07/14/2020</p>
+                </div>
+            </div>
+        </div>
+        <div id='recent-activity'>
+            <h4>Recent Activity</h4>
+            <div class="user-wrapper">
+                <div class="user-div">
+                    <a><img class="user-img" src="images/member-1.jpg" alt="member"/></a>
+                    <p>Laura Ortego commented on SEO Tips</p>
+                    <p>4 hours ago</p>
+                </div>
+                <div class="user-div">
+                    <a><img class="user-img" src="images/member-2.jpg" alt="member"/></a>
+                    <p>Bryan Sherlin added Anna Rogers to contacts</p>
+                    <p>6 hours ago</p>
+                </div>
+                <div class="user-div">
+                    <a><img class="user-img" src="images/member-3.jpg" alt="member"/></a>
+                    <p>Anna Rogers rated YourApp</p>
+                    <p>5 hours ago</p>
+                </div>
+                <div class="user-div">
+                    <a><img class="user-img" src="images/member-4.jpg" alt="member"/></a>
+                    <p>Howard Coates completed a Blog post</p>
+                    <p>6 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <div id='message-user'>
+            <h4>Message User</h4>
+            <div class="user-wrapper">
+                <form name="messageForm" onsubmit="return validateForm()">
+                    <input id="user-search-bar" class="search search-input" type="search" name="userName" placeholder="Search for user...">
+                    <div class="suggestions">
+                    </div>
+                    <textarea class="textarea" name="messageArea" placeholder="Message for user..." rows="14" columns="50"></textarea>
+                    <input class="button" type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+        <div id='settings'>
+            <h4>Settings</h4>
+            <div class="user-wrapper">
+                <p>Send Email Notifications</p>
+                <label class="switch">
+                    <input id="notifications-switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <p>Set Profile to Public</p>
+                <label class="switch">
+                    <input id="public-switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <select id="time-zone" class="select">
+                    <option selected="selected">Time Zone</option>
+                    <option value="Pacific">Pacific</option>
+                    <option value="Mountain">Mountain</option>
+                    <option value="Central">Central</option>
+                    <option value="Eastern">Eastern</option>
+                </select>
+                <div id="settings-buttons">
+                    <input class="button" id="save-button" type="button" value="Save">
+                    <input class="button" id="cancel-button" type="button" value="Cancel">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="javascript/app.js"></script>
+  </body>
+</html>  
